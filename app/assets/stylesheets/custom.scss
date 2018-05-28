@@ -4,7 +4,10 @@
 header{
   height: 70px; /* 高さ */
   width: 100%; /* 長さ */
-  background-color: black;
+  color: white;
+  line-height: 60px;
+  font-size: 50px;
+  background-color: #b7ffb7;
   position: fixed; /* ヘッダーを固定(これが重要) */
   top: 0; /* 固定する位置 */
   left: 0; /* 固定する位置 */
@@ -12,7 +15,12 @@ header{
 }
 
 body {
+  background-color: #f7f7f7;
   padding-top: 60px;
+}
+
+table {
+  margin :20px;
 }
 
 section {

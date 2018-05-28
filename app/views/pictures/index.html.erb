@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-<header></header>
+<header>
+  🐈
+</header>
 <h1>Pictures</h1>
 
 <%= link_to 'New Picture', new_picture_path %>
@@ -32,7 +34,6 @@
         <%=image_tag picture.photo(:medium) %>
         <% end %>
         </td>
-
     <% if c == 2 %>
       </tr>
     <% end %>
