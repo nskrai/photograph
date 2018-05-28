@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<header></header>
+<h1>Pictures</h1>
+
+<%= link_to 'New Picture', new_picture_path %>
+
+<!--<br>-->
+<!--<% count = 0 %>-->
+<!--<% @pictures.each do |picture| %>-->
+<!--  <% count = count + 1 %>-->
+<!--  <%= link_to picture do%>-->
+<!--    <%=image_tag picture.photo(:medium), style: "display: inline;" %>-->
+<!--  <% end %>-->
+<!--  <% if count == (count*3) %>-->
+<!--     <hr>-->
+<!--  <% end %>-->
+<!--<% end %>-->
+
+    <% index = 0 %>
+
+<table>
+  <% @pictures.each do |picture| %>
+
+    <% r = (index)/3 %>
+    <% c = (index)%3 %>
+    <% if c == 0 %>
+      <tr>
+    <% end %>
+
+        <td>
+        <%= link_to picture do%>
+        <%=image_tag picture.photo(:medium) %>
+        <% end %>
+        </td>
+
+    <% if c == 2 %>
+      </tr>
+    <% end %>
+    <% index +=1 %>
+
+  <% end %>
+</table>
